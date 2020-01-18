@@ -762,6 +762,6 @@
         <script src="js/jquery-modal-video.min.js"></script>
         <script src="js/validator.min.js"></script>
         <script src="js/quiva.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3G3PBWEiafwxyNpAJZlek_A6L2tPKg3g"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmwlSPdNTGYgo1DJnJ0S7rcALOeiaG4N0"></script>
     </body>
 </html>
