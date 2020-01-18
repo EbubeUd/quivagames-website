@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Solvit",
+"dataUrl": "Solvit_Hackathon.data.unityweb",
+"asmCodeUrl": "Solvit_Hackathon.asm.code.unityweb",
+"asmMemoryUrl": "Solvit_Hackathon.asm.memory.unityweb",
+"asmFrameworkUrl": "Solvit_Hackathon.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000"
+}
