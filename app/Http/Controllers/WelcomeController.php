@@ -59,26 +59,18 @@ class WelcomeController extends Controller
      */
     public function contactUs(Request $request)
     {
-    	if($request->ajax() || !$request->ajax()){
+        
+  
+        $contact_us = new ContactUs;
+        $contact_us->name 	= $request->name;
+        $contact_us->email 	= $request->email;
+        $contact_us->message= $request->message;
 
-            // Validate request
-	    	$request->validate([
-	    		'name'	=>'required|max:50|string',
-	            'email'	=>'required|max:50|string',
-	            'message'=>'required|min:20|string'
-	        ]);
-
-	        $contact_us = new ContactUs;
-	        $contact_us->name 	= $request->name;
-	        $contact_us->email 	= $request->email;
-	        $contact_us->message= $request->message;
-
-			if ($contact_us->save()) {
-                // return 'success';
-                return Redirect::back();
-			}
+        if ($contact_us->save()) {
+      
+             return redirect("/");
         }
         // return 'failed';
-        return Redirect::back();
+        return redirect("/");
     }
 }
