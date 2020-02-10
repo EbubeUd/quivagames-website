@@ -66,7 +66,7 @@
     <body>
         <!-- Loading Screen -->
         <div id="loader-wrapper">
-             <h1 class="loader-logo"><img src= <?= "'images/Quiva360p.gif?t=". time() ."'" ?>  style="max-width: 100%"></h1>
+             <h1 class="loader-logo"><img src="images/loader.gif" style="max-width: 100%"></h1>
             <div id="progress"></div>
        
         </div>
@@ -76,7 +76,7 @@
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
                 <div class="container">
                     <!-- Site Logo -->
-                    <a id="logo" class="navbar-brand" href="#" style="max-width:45%"><span class="colored"><?php echo setting('site.loader-logo-left'); ?></span></a>
+                    <a id="logo" class="navbar-brand" href="#" style="max-width:45%"><span class="colored"><img src="images/side-text-version.png" style="max-width: 30%" /></span></a>
                     <!-- Dropdown Button -->
                     <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="icon-bar"></span>
@@ -176,7 +176,7 @@
                                 <hr class="animation-element extend in-view" style="margin-top:20px">
                             </div>
                             <div class="col-md-6">
-                                <img id="support-image" src="{{$item['image_url']}}" data-src="{{$item['image_url']}}" class="img-fluid b-lazy" alt="digital collage">
+                                <img id="support-image" src="images/quiva games.png"  class="img-fluid b-lazy" alt="digital collage">
                             </div>
                         </div>
                     @endforeach
@@ -714,7 +714,7 @@
                             <h2 class="short-hr-left">OUR DETAILS</h2>
                             <div id="contact-info">
                                 <ul>
-                                    <li><i class="fa fa-phone"></i><p>Phone: <span class="colored"><a href="tel:<?php echo setting('site.phone'); ?>"><b style="color:#E48632 !important"><?php echo setting('site.phone'); ?></b></a></span></p></li>
+                                    <li><i class="fa fa-phone"></i><p>Phone: <span class="colored"><a href="tel:+234 907 286 0595"><b style="color:#E48632 !important">+234 907 286 0595</b></a></span></p></li>
                                     <li><i class="fa fa-envelope"></i><p>Email: <span class="colored"><a href="mailto:<?php echo setting('site.email'); ?>"><b style="color:#E48632 !important"><?php echo setting('site.email'); ?></b></a></span></p></li>
                                     <li><i class="fa fa-globe"></i><p>Website: <span class="colored"><a href="<?php echo setting('site.website'); ?>" target="_blank"><b style="color:#E48632 !important"><?php echo setting('site.website'); ?></b></a></span></p></li>
                                     <li><i class="fa fa-map-marker"></i><p>Address: <span class="colored"><b style="color:#E48632 !important"><?php echo setting('site.address'); ?></b></span></p></li>
