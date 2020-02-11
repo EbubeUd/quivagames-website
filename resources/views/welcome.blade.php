@@ -626,7 +626,46 @@
                 </div>
             </div>
 
-   
+            <!-- /// TEAM SECTION /// -->
+            <div id="team" class="large-margin">
+                <a href="team.html"></a><!-- Nav Anchor -->
+                <div class="row heading tiny-margin">
+                    <div class="col-md-auto">
+                        <h1 class="animation-element slide-down">THE <span class="colored">TEAM</span></h1>
+                    </div>
+                    <div class="col">
+                        <hr class="animation-element extend">
+                    </div>
+                </div>
+                <div class="row medium-margin">
+                    @if ($page_data['teamitem'])
+                        <div class="col-md-11 tiny-margin">
+                           <?php echo setting('site.the-team-message'); ?>
+                        </div>
+                        <div id="full-row" class="row text-center">
+                            @foreach ($page_data['teamitem'] as $item)
+                                <div class="col-md-3 team-card">
+                                    <figure>
+                                        <img src="images/placeholder.jpg" style="max-width:200px" data-src="{{$item['image_url']}}" class="img-fluid b-lazy" alt="teammember">
+                                        <figcaption class="team-caption">
+                                            <p>“{{$item['member_message']}}.”</p>
+                                            <hr class="hr-short">
+                                            <ul>
+                                                <li><a href="{{$item['facebook']}}"><i class="fa fa-facebook fa-lg"></i></a></li>
+                                                <li><a href="{{$item['twitter']}}"><i class="fa fa-twitter fa-lg"></i></a></li>
+                                                <li><a href="{{$item['linkedin']}}"><i class="fa fa-linkedin fa-lg"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <p class="team-name">{{$item['member_name']}}</p>
+                                    <p class="subtle">{{$item['member_postion']}}</p>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
+                </div>
+            </div>
+
             <!-- /// CONTACT SECTION /// -->
             <div id="contact" class="large-margin">
                 <a href="contact.html"></a><!-- Nav Anchor -->
