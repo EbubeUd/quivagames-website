@@ -701,6 +701,144 @@
 
 
                 <!-- /// ADVERT SECTION /// -->
+                <div id="team" class="large-margin">
+                    <a href="team.html"></a><!-- Nav Anchor -->
+
+
+
+
+                    <!-- /// TEAM SECTION /// -->
+                    <div id="team" class="large-margin">
+                        <a href="team.html"></a><!-- Nav Anchor -->
+                        <div class="row heading tiny-margin">
+                            <div class="col-md-auto">
+                                <h1 class="animation-element slide-down">THE <span class="colored">TEAM</span></h1>
+                            </div>
+                            <div class="col">
+                                <hr class="animation-element extend">
+                            </div>
+                        </div>
+                        <div class="row medium-margin">
+                            @if ($page_data['teamitem'])
+                            <div class="col-md-11 tiny-margin">
+                                <?php echo setting('site.the-team-message'); ?>
+                            </div>
+                            <div id="full-row" class="row text-center">
+                                @foreach ($page_data['teamitem'] as $item)
+                                <div class="col-md-3 team-card">
+                                    <figure>
+                                        <img src="images/placeholder.jpg" style="max-width:200px"
+                                            data-src="{{$item['image_url']}}" class="img-fluid b-lazy" alt="teammember">
+                                        <figcaption class="team-caption">
+                                            <p>“{{$item['member_message']}}.”</p>
+                                            <hr class="hr-short">
+                                            <ul>
+                                                <li><a href="{{$item['facebook']}}"><i
+                                                            class="fa fa-facebook fa-lg"></i></a>
+                                                </li>
+                                                <li><a href="{{$item['twitter']}}"><i
+                                                            class="fa fa-twitter fa-lg"></i></a>
+                                                </li>
+                                                <li><a href="{{$item['linkedin']}}"><i
+                                                            class="fa fa-linkedin fa-lg"></i></a>
+                                                </li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <p class="team-name">{{$item['member_name']}}</p>
+                                    <p class="subtle">{{$item['member_postion']}}</p>
+                                </div>
+                                @endforeach
+                            </div>
+                            @endif
+                        </div>
+                    </div>
+
+                    <!-- /// CONTACT SECTION /// -->
+                    <div id="contact" class="large-margin">
+                        <a href="contact.html"></a><!-- Nav Anchor -->
+                        <div class="row heading tiny-margin">
+                            <div class="col-md-auto">
+                                <h1 class="animation-element slide-down">GET IN <span class="colored">TOUCH</span>
+                                </h1>
+                            </div>
+                            <div class="col">
+                                <hr class="animation-element extend">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="row small-margin">
+                                <div class="col-md-11">
+                                    <p><?php echo setting('site.get-in-touch-message'); ?>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2 class="short-hr-left">LEAVE US A MESSAGE</h2>
+                                    <form id="contactForm" data-toggle="validator" method="post" action="/contactus">
+                                        @csrf
+                                        <div class="form-group">
+                                            <!-- Name Field -->
+                                            <input type="text" name="name" id="name" placeholder="Name*" required
+                                                size="35" data-error="Name is required">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- Email Field -->
+                                            <input type="email" name="email" id="email" placeholder="Email*" required
+                                                size="35" data-error="Email is required">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- Message Field -->
+                                            <textarea id="message" name="message" placeholder="Message*" required
+                                                data-error="Message cannot be empty"></textarea>
+                                            <p class="subtle">* required field</p>
+                                            <div class="help-block with-errors"></div>
+                                            <!-- Submit Button -->
+                                            <button type="submit" class="button">SEND MESSAGE</button>
+                                            <!-- Success Message -->
+                                            <div id="msgSubmit" class="text-center hidden"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2 class="short-hr-left">OUR DETAILS</h2>
+                                    <div id="contact-info">
+                                        <ul>
+                                            <li><i class="fa fa-phone"></i>
+                                                <p>Phone: <span class="colored"><a href="tel:+234 907 286 0595"><b
+                                                                style="color:#E48632 !important">+234 907 286
+                                                                0595</b></a></span></p>
+                                            </li>
+                                            <li><i class="fa fa-envelope"></i>
+                                                <p>Email: <span class="colored"><a
+                                                            href="mailto:<?php echo setting('site.email'); ?>"><b
+                                                                style="color:#E48632 !important"><?php echo setting('site.email'); ?></b></a></span>
+                                                </p>
+                                            </li>
+                                            <li><i class="fa fa-globe"></i>
+                                                <p>Website: <span class="colored"><a
+                                                            href="<?php echo setting('site.website'); ?>"
+                                                            target="_blank"><b style="color:#E48632 !important"><?php echo setting('site.website'); ?></b></a></span>
+                                                </p>
+                                            </li>
+                                            <li><i class="fa fa-map-marker"></i>
+                                                <p>Address: <span class="colored"><b
+                                                            style="color:#E48632 !important"><?php echo setting('site.address'); ?></b></span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Google Map -->
+                                    <div id="map-canvas"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
 
                 <!-- Main Container End -->
